@@ -7,6 +7,9 @@ jobs:
 
         runs-on: ubuntu-latest
 
+        env:
+            CI: true
+
         strategy:
             matrix:
                 node-version: [14.x, 16.x, 18.x]
@@ -19,9 +22,13 @@ jobs:
                   node-version: ${{ matrix.node-version }}
             - run: npm ci
             - run: npm run lint
+<<<<<<< HEAD
             - run: npm run test:coverage
               if: ${{ matrix.node-version != '18.x' }}
             - run: npm run test:coverage
               if: ${{ matrix.node-version == '18.x' }}
               env:
                   NODE_OPTIONS: --openssl-legacy-provider
+=======
+            - run: npm run test
+>>>>>>> 3c0fec9 (Convert to Typescript, remove NWB)
