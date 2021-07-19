@@ -83,7 +83,7 @@ class HyperResponsiveTable extends Component<HyperResponsiveTableProps, HyperRes
     }
   }
 
-  updateQuery = (props: HyperResponsiveTableProps) => {
+  updateQuery = (props: HyperResponsiveTableProps): void => {
     let mql;
     // Default to wide view for ancient browsers.
     let narrow = false;

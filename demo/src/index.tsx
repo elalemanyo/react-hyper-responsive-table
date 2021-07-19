@@ -9,6 +9,7 @@ const headers = {
   name: 'Name',
   role: 'Role',
 };
+
 const rows = [
   {
     name: 'Marlon Brando',
